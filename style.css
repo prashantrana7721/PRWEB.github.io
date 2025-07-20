@@ -1,18 +1,72 @@
 /* global */
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 
-.grid-2{
+.grid-2 {
     display: grid;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: 1fr 2fr;
+}
+
+.code-icon {
+    animation: float 3s ease-in-out infinite, glow 1.5s alternate infinite;
+    transition: transform 0.4s ease;
+}
+
+.code-icon:hover {
+    transform: rotate(15deg) scale(1.2);
+    animation: float 2s ease-in-out infinite, glow-hover 0.5s alternate infinite;
+    cursor: pointer;
+}
+
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+    100% { transform: translateY(0); }
+}
+
+@keyframes glow {
+    0% { text-shadow: 0 0 5px #1E90FF; }
+    100% { text-shadow: 0 0 20px #1E90FF, 0 0 30px #1E90FF; }
+}
+
+@keyframes glow-hover {
+    0% { text-shadow: 0 0 10px #1E90FF; }
+    100% { text-shadow: 0 0 25px #1E90FF, 0 0 35px #1E90FF; }
+}
+
+.resume-download {
+  font-size: 2rem;
+  color: #1E90FF;
+  text-shadow: 0 0 10px #1E90FF;
+  transition: all 0.4s ease;
+  display: inline-block;
+  margin-top: 2rem;
+}
+
+.resume-download:hover {
+  transform: scale(1.3) rotate(10deg);
+  text-shadow: 0 0 20px #1E90FF, 0 0 40px #1E90FF;
+  cursor: pointer;
+}
+
+.resume-note {
+  font-size: 2rem;
+  margin-top: 2rem;
+  color: #1E90FF;
+  font-style: italic;
 }
 
 body{
     margin: 0;
     padding: 0;
     font-family: 'Roboto', sans-serif;
-    background-color: #101214;
+    background-color: #1a1a1a; /* Dark Grey , Similar To Gemini's Dark Mode */
     color: #7A7C80;
 
+}
+
+.highlight-blue {
+    color: #1E90FF; /* Dodger Blue or any shade you prefer */
+    font-weight: bold;
 }
 
 h2,.white{
